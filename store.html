@@ -3,7 +3,29 @@
     <link rel="stylesheet" href="styles.css">
     <title>Store Page</title>
     <script>
+        var imgs = ['images/case1.png','images/case2.png','images/case3.png'];
+        var imgSrcNum = 0;
 
+        function left(){
+            var currentimg = document.getElementById('slider');
+
+            if(imgSrcNum == 0){
+                imgSrcNum = imgs.length-1;
+            } else {
+                imgSrcNum--;
+            }
+            currentimg.src = imgs[imgSrcNum];
+        }
+        function right(){
+            var currentimg = document.getElementById('slider');
+
+            if(imgSrcNum == imgs.length-1){
+                imgSrcNum = 0;
+            } else {
+                imgSrcNum++;
+            }
+            currentimg.src = imgs[imgSrcNum];
+        }
     </script>
 
 </head>
@@ -25,12 +47,11 @@
     <div class="headtext2">CASES</div>
     <div class="midUItext">CHOOSE YOUR DESIRED DESIGN</div>
 
-    <div class="midUI"></div>
-
-    <div class="image1"><img src="images/case1.png"></div>
-    <div class="image2"><img src="images/case2.png"></div>
-    <div class="image3"><img src="images/case3.png"></div>
-
+    <div class="midUI"> </div>
+    <div class="leftArrow" onclick="left()"><img src="images/arrowleft.png" width="100px"></div>
+    <div class="rightArrow" onclick="right()"><img src="images/arrowright.png" width="100px"></div>
+    <div class="image3"><img id="slider" src="images/case3.png" width="250px"></div>
+ 
 
     <div class="copyright"></div>
     <div class="copyrightText"><i>COPYRIGHT 2022 USA.CASES LIMITED ALL RIGHTS RESERVED.</i></div>

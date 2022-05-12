@@ -2,19 +2,20 @@
     font-family: licenceplateusa;
     src: url(fonts/licenceplateusa.ttf);
 } 
-/* font not working, not sure why  */
+
 body {
     font-family: licenceplateusa;
     display: grid;
     grid-template-columns: 2fr 3fr 1fr 3fr 2fr;
     grid-template-rows: 100px 150px 400px 100px;
-    background-color: lightblue;    
+     background: rgb(0,125,255);
+    background: linear-gradient(90deg, rgba(0,125,255,1) 0%, rgba(141,164,230,1) 50%, rgba(35,158,255,1) 100%, rgba(0,212,255,1) 100%); 
+    
 }
 
 
 
 .strip1 {
-    
     margin-left: 20px;
     margin-right: 20px;
     background-color: rgba(40, 90, 251);
@@ -63,14 +64,27 @@ body {
     
 }
 .headtext1 {    
-    
+    text-shadow:
+        -3px -3px 0 #ffff, 
+        3px -3px 0 #ffff,
+        -3px  3px 0 #ffff,
+        3px  3px 0 #ffff;
+    color: rgba(255,42,42,255);
     font-size: 72px;
     margin-top: 5px;
     margin-left: 340px;
     grid-column: 2/3;
     grid-row: 1/2;
+
 }
+
 .headtext2 {
+    color: rgba(20, 55, 215);
+    text-shadow:
+    -3px -3px 0 #ffff, 
+     3px -3px 0 #ffff,
+    -3px  3px 0 #ffff,
+    3px  3px 0 #ffff;
     font-size: 70px;
     margin-top: 5px;
     grid-column: 4/5;
@@ -92,10 +106,16 @@ body {
     border-radius: 8px;
     border: 1px solid;
     box-shadow: 0px 0px 7px 4px black;
+
     
 
 }
     .midUItext {
+        text-shadow:
+        -3px -3px 0 #ffff, 
+         3px -3px 0 #ffff,
+        -3px  3px 0 #ffff,
+        3px  3px 0 #ffff;
         grid-column: 2/5;
         grid-row: 2/3;
         margin-top: 60px;
@@ -105,12 +125,16 @@ body {
         text-shadow:  10px 10px 21px 21px rgba(40, 90, 251);
     }
 
-    .midUItext1 {
-        margin-top: 50px;
-        margin-left: -30px;
+    .Indextext1 {
+        color: white;
+        text-shadow: 3px 3px 5px black;
+        margin-top: 40px;
+        margin-left: -70px;
         grid-column: 3/5;
         grid-row: 3/4;
         font-size: 50px;
+        text-align: center;
+        position: relative;
     }
 
     .midUI img {
@@ -140,24 +164,26 @@ body {
         margin-top: 38px;
     }
 
-    .image1 {
-        margin-top: 50px;
-        margin-left: 120px;
-        grid-column: 2/3;
-        grid-row: 3/4;
-    }
-
-    .image2 {
-        grid-column: 4/5;
-        grid-row: 3/4;
-        margin-top: 60px;
-        margin-left: 150px;
-    }
-
     .image3 {
         margin-top: 20px;
-        margin-left: -50px;
+        
         grid-column: 3/4;
         grid-row: 3/4;
+        cursor: pointer;
         
+    }
+
+    .leftArrow {
+        cursor: pointer;
+        margin-top: 150px;
+        margin-left: 385px;
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+    .rightArrow {
+        cursor: pointer;
+        margin-top: 150px;
+        grid-row: 3/4;
+        grid-column: 4/5;
     }
