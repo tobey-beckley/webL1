@@ -2,6 +2,10 @@
     font-family: licenceplateusa;
     src: url(fonts/licenceplateusa.ttf);
 } 
+@font-face {
+    font-family: Jersey;
+    src: url(fonts/Jersey.ttf)
+}
 
 body {
     font-family: licenceplateusa;
@@ -15,7 +19,7 @@ body {
 
 
 
-.strip1 {
+.strip1 { /*Left Navigation*/
     margin-left: 20px;
     margin-right: 20px;
     background-color: rgba(40, 90, 251);
@@ -33,7 +37,13 @@ body {
     margin-top: 10px;
 }
 
-.strip2 {
+.strip1 img:hover {
+    width: 80px;
+    margin-left: 48px;
+    margin-top: 6px;
+}
+
+.strip2 { /*Right Navigation*/
     grid-column: 5/6;       
     margin-left: 20px;
     margin-right: 20px;
@@ -50,8 +60,13 @@ body {
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.strip2 img:hover {
+    width: 80px;
+    margin-left: 45px;
+    margin-top: 10px;
+}
 
-.midStrip {
+.midStrip { /*Middle Navigation*/
     margin-left: 300px;
     margin-right: 300px;
     grid-column: 2/5;    
@@ -69,7 +84,7 @@ body {
         3px -3px 0 #ffff,
         -3px  3px 0 #ffff,
         3px  3px 0 #ffff;
-    color: rgba(255,42,42,255);
+    color: rgba(254,42,42,254);
     font-size: 72px;
     margin-top: 5px;
     margin-left: 340px;
@@ -122,7 +137,7 @@ body {
         font-size: 30px;
         text-align: center;
         font-size: 70px;
-        text-shadow:  10px 10px 21px 21px rgba(40, 90, 251);
+       
     }
 
     .Indextext1 {
@@ -137,11 +152,12 @@ body {
         position: relative;
     }
 
-    .midUI img {
-        margin-top: 30px;
-        margin-left: 120px;
+    .indexCase { 
+        margin-top: 50px;
+        margin-left: 80px;
+        grid-column: 2/3;
+        grid-row: 3/4;
         transform: rotate(15deg);
-        width: 230px;
     }
 
     .copyright {
@@ -166,7 +182,6 @@ body {
 
     .image3 {
         margin-top: 20px;
-        
         grid-column: 3/4;
         grid-row: 3/4;
         cursor: pointer;
@@ -179,6 +194,7 @@ body {
         margin-left: 385px;
         grid-row: 3/4;
         grid-column: 2/3;
+        width: 100px;
     }
 
     .rightArrow {
@@ -186,4 +202,31 @@ body {
         margin-top: 150px;
         grid-row: 3/4;
         grid-column: 4/5;
+        width: 100px;
+    }
+
+    h2 { /*Heading for About and Shipping.html*/
+        text-align: center;
+        font-size: 30px;
+        text-decoration: underline;
+        color: white;
+        margin-left: 220px;
+    }
+
+    .aboutCase {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            transform: rotate(15deg);
+            margin-top: 90px;
+            margin-left: 50px;
+    }
+
+    .aboutText { /*About.HTML and Shipping.HTML ui text*/
+        grid-column: 2/5;
+        grid-row: 3/4;
+        margin-top: 100px;
+        font-family: Jersey;
+        text-align: center;
+        font-size: 35px;
+        margin-left: 220px;
     }
